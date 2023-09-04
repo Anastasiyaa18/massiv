@@ -2,16 +2,16 @@ package ru.netology.stats;
 
 
 public class SalesService {
-    public int summa(int[] sales) {
+    public int sum(int[] sales) {
         int total = 0;
-        for (int s : sales) {
-            total = s + total;
+        for (int sale : sales) {
+            total = sale + total;
         }
         return total;
     }
 
-    public int srZnach(int[] sales) {
-        int average = summa(sales) / sales.length;
+    public int averageValue(int[] sales) {
+        int average = sum(sales) / sales.length;
         return average;
     }
 
@@ -38,24 +38,24 @@ public class SalesService {
     }
 
     public int belowAverage(int[] sales) {
-        int quantity = 0;
-        int average = srZnach(sales);
-        for (int s : sales) {
-            if (s < average) {
-                quantity++;
+        int belowAverage = 0;
+        int average = averageValue(sales);
+        for (int sale : sales) {
+            if (sale < average) {
+                belowAverage++;
             }
         }
-        return quantity;
+        return belowAverage;
     }
 
     public int aboveAverage(int[] sales) {
-        int quantity = 0;
-        int average = srZnach(sales);
-        for (int s : sales) {
-            if (s > average) {
-                quantity++;
+        int aboveAverage = 0;
+        int average = averageValue(sales);
+        for (int sale : sales) {
+            if (sale > average) {
+                aboveAverage++;
             }
         }
-        return quantity;
+        return aboveAverage;
     }
 }

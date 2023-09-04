@@ -5,29 +5,29 @@ import org.junit.jupiter.api.Test;
 
 public class SalesServiceTest {
     @Test
-    public void TotalSum() {
+    public void totalSum() {
         SalesService service = new SalesService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expected = 180;
-        int actual = service.summa(sales);
+        int actual = service.sum(sales);
 
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void SrZnach() {
+    public void averageValue() {
         SalesService service = new SalesService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expected = 15;
-        int actual = service.srZnach(sales);
+        int actual = service.averageValue(sales);
 
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void MaxMonth() {
+    public void monthMaximumSales() {
         SalesService service = new SalesService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
@@ -38,7 +38,7 @@ public class SalesServiceTest {
     }
 
     @Test
-    public void MinMonth() {
+    public void monthMinimumSales() {
         SalesService service = new SalesService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
@@ -49,7 +49,7 @@ public class SalesServiceTest {
     }
 
     @Test
-    public void quantityBelowAverage() {
+    public void monthSalesBelowAverage() {
         SalesService service = new SalesService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
@@ -60,7 +60,7 @@ public class SalesServiceTest {
     }
 
     @Test
-    public void quantityAboveAverage() {
+    public void monthSalesAboveAverage() {
         SalesService service = new SalesService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
